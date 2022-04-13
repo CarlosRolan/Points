@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
     }
 })
 
-export default ( {onPressLeft, txtLeft } ) => {
+export default ( {onPressLeft, txtLeft, togglePointsFilter } ) => {
     return (
         <View style={styles.panel}>
             <Button title={txtLeft} onPress={onPressLeft} />
-            <Button title="Mostrar/Ocultar"/>
+            <Button title="Mostrar/Ocultar" onPress={togglePointsFilter}/>
         </View>
     )
 }
