@@ -4,15 +4,16 @@ import { StyleSheet, Dimensions } from "react-native"
 
 const styles = StyleSheet.create({
     map: {
-        height : Dimensions.get('window').height,
+        height : Dimensions.get('window').height - 150,
         width: Dimensions.get('window').width,
       }
 })
 
-export default () => {
+export default ({ onLongPress }) => {
     return (
         <MapView 
-            style={StyleSheet.map}/>
+            style={styles.map}
+            onLongPress={onLongPress}/>
     )
 }
 

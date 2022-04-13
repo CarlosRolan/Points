@@ -1,5 +1,6 @@
 import React from "react"
 import { StyleSheet, Modal, View, Text } from "react-native"
+import { Children } from "react/cjs/react.production.min"
 
 const styles = StyleSheet.create({
     center: {
@@ -20,16 +21,16 @@ const styles = StyleSheet.create({
 }
 )
 
-export default () => {
+export default ({ children, visivility }) => {
     return (
     <Modal 
         animationType='slide'
         transparent= {true}
-        visible={true}
+        visible={visivility}
     >
         <View style={styles.center}>
           <View style={styles.modalView}>
-            <Text>:)</Text>
+            {children}
           </View>        
         </View>
       </Modal>  
